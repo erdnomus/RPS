@@ -1,10 +1,13 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class rps {
     public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     ArrayList<String> wordList = new ArrayList<>();
+    Random rand = new Random();
+
     String cpuChoice = "rock";
 
         // greeting the user
@@ -15,16 +18,21 @@ public class rps {
         System.out.println("Choose a weapon...");
         System.out.println("rock, paper, scissors");
         
-        String input = scanner.nextLine().toUpperCase(); //in.nextLine().toLowerCase();
+        String input = scanner.nextLine().toLowerCase(); //in.nextLine().toLowerCase();
         System.out.println("You chose " + input);
         
-
+        
 
         // storing the options in an array
 
         wordList.add("rock");
         wordList.add("paper");
         wordList.add("scissors");
+
+        // random number generator from array
+        int ran = rand.nextInt(3);
+        cpuChoice = wordList.get(ran);
+
         // if user input
             if(input.equals("rock") && cpuChoice.equals("scissors")){
 
