@@ -1,6 +1,69 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class rps {
     public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    ArrayList<String> wordList = new ArrayList<>();
+    String cpuChoice = "rock";
+
+        // greeting the user
+        System.out.println("Hello, Welcome to RPS");
+
+
+        // ask user input for game
+        System.out.println("Choose a weapon...");
+        System.out.println("rock, paper, scissors");
         
-        System.out.println("Hello, World!");
+        String input = scanner.nextLine().toUpperCase(); //in.nextLine().toLowerCase();
+        System.out.println("You chose " + input);
+        
+
+
+        // storing the options in an array
+
+        wordList.add("rock");
+        wordList.add("paper");
+        wordList.add("scissors");
+        // if user input
+            if(input.equals("rock") && cpuChoice.equals("scissors")){
+
+                System.out.println("You win!");
+                System.out.println("Cpu chose " + cpuChoice);
+                
+            }
+            else if(input.equals("scissors") && cpuChoice.equals("paper")){
+
+                System.out.println("You win!");
+                System.out.println("Cpu chose " + cpuChoice);
+                
+            }
+            else if(input.equals("paper") && cpuChoice.equals("rock")){
+
+                System.out.println("You win!");
+                System.out.println("Cpu chose " + cpuChoice);
+                
+            }
+            else if(input.equals(cpuChoice)){
+
+                System.out.println("Tie!");
+                System.out.println("Cpu chose " + cpuChoice);
+            }
+            else {
+ 
+                System.out.println("You lose!");
+                System.out.println("Cpu chose " + cpuChoice);
+            }
+            
+
+
+        // cpu picks at random
+
+        // displays the winner
+        
+
+
+
+
     }
 }
